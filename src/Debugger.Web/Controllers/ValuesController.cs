@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Debugger.Web.Controllers
 {
@@ -10,11 +14,36 @@ namespace Debugger.Web.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IDbConnection _conn;
+
+        public ValuesController(IDbConnection conn)
+        {
+            _conn = conn;
+        }
+
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            var date = DateTime.UtcNow;
+
+            var text = new StringBuilder($"Starting Connection. at {JsonConvert.SerializeObject(date)}");
+
+            try {
+                text.AppendLine();
+
+                _conn.Open();
+
+                text.AppendLine("");
+            }
+            catch (Exception e)
+            {
+                text.AppendLine($"Error. {e.Message}");
+            }
+
+            text.AppendLine($"Operation Completed. Duration is {(DateTime.UtcNow - date).TotalSeconds} seconds");
+
+            return text.ToString();
         }
 
         // GET api/values/5

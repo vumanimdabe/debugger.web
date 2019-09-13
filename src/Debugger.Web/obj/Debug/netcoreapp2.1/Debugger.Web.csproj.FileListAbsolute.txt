@@ -3,7 +3,6 @@ C:\Git\Personal\debugger.web\src\Debugger.Web\bin\Debug\netcoreapp2.1\Debugger.W
 C:\Git\Personal\debugger.web\src\Debugger.Web\bin\Debug\netcoreapp2.1\Debugger.Web.runtimeconfig.dev.json
 C:\Git\Personal\debugger.web\src\Debugger.Web\bin\Debug\netcoreapp2.1\Debugger.Web.dll
 C:\Git\Personal\debugger.web\src\Debugger.Web\bin\Debug\netcoreapp2.1\Debugger.Web.pdb
-C:\Git\Personal\debugger.web\src\Debugger.Web\obj\Debug\netcoreapp2.1\Debugger.Web.csprojAssemblyReference.cache
 C:\Git\Personal\debugger.web\src\Debugger.Web\obj\Debug\netcoreapp2.1\Debugger.Web.csproj.CoreCompileInputs.cache
 C:\Git\Personal\debugger.web\src\Debugger.Web\obj\Debug\netcoreapp2.1\Debugger.Web.RazorAssemblyInfo.cache
 C:\Git\Personal\debugger.web\src\Debugger.Web\obj\Debug\netcoreapp2.1\Debugger.Web.RazorAssemblyInfo.cs

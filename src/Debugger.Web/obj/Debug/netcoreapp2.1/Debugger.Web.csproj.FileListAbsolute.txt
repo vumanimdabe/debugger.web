@@ -11,3 +11,4 @@ C:\Git\Personal\debugger.web\src\Debugger.Web\obj\Debug\netcoreapp2.1\Debugger.W
 C:\Git\Personal\debugger.web\src\Debugger.Web\obj\Debug\netcoreapp2.1\Debugger.Web.RazorTargetAssemblyInfo.cache
 C:\Git\Personal\debugger.web\src\Debugger.Web\obj\Debug\netcoreapp2.1\Debugger.Web.dll
 C:\Git\Personal\debugger.web\src\Debugger.Web\obj\Debug\netcoreapp2.1\Debugger.Web.pdb
+C:\Git\Personal\debugger.web\src\Debugger.Web\obj\Debug\netcoreapp2.1\Debugger.Web.csprojAssemblyReference.cache

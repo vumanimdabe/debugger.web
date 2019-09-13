@@ -27,21 +27,29 @@ namespace Debugger.Web.Controllers
         {
             var date = DateTime.UtcNow;
 
-            var text = new StringBuilder($"Starting Connection. at {JsonConvert.SerializeObject(date)}");
+            var text = new StringBuilder($"{JsonConvert.SerializeObject(DateTime.UtcNow).Substring(1, JsonConvert.SerializeObject(DateTime.UtcNow).Length - 2)}: Starting Connection.");
+
+            text.AppendLine();
 
             try {
                 text.AppendLine();
 
                 _conn.Open();
 
-                text.AppendLine("");
+                text.AppendLine($"{JsonConvert.SerializeObject(DateTime.UtcNow).Substring(1, JsonConvert.SerializeObject(DateTime.UtcNow).Length - 2)}: Connection Succesful.");
+
+                text.AppendLine();
+
             }
             catch (Exception e)
             {
-                text.AppendLine($"Error. {e.Message}");
+                text.AppendLine($"{JsonConvert.SerializeObject(DateTime.UtcNow).Substring(1, JsonConvert.SerializeObject(DateTime.UtcNow).Length - 2)}: Error. {e.ToString()}");
+
+                text.AppendLine();
+
             }
 
-            text.AppendLine($"Operation Completed. Duration is {(DateTime.UtcNow - date).TotalSeconds} seconds");
+            text.AppendLine($"{JsonConvert.SerializeObject(DateTime.UtcNow).Substring(1, JsonConvert.SerializeObject(DateTime.UtcNow).Length-2)}: Operation Completed. Duration is {(DateTime.UtcNow - date).TotalSeconds} seconds");
 
             return text.ToString();
         }
